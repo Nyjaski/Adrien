@@ -15,7 +15,8 @@ public class RomanNumerals {
 			}
 		}
 		else if(nombrearabe%1000!=0){
-		k="I";	
+			
+		k=k+"I";	
 		}
 		return k;
 	}
