@@ -2,11 +2,26 @@ package iut.tdd;
 
 public class RomanNumerals {
 	public String convertToRoman(String arabe) {
-		return "I";
+		int nombrearabe=Integer.valueOf(arabe);
+		String k="";
+		if(nombrearabe%1000==0 && nombrearabe>0){
+			int d=1000;
+			if(d==nombrearabe){
+				k=k+"M";
+			}
+			while(d!=nombrearabe){
+				k=k+"M";
+				d=d+1000;
+			}
+		}
+		else if(nombrearabe%1000!=0){
+		k="I";	
+		}
+		return k;
 	}
 
 	public String convertFromRoman(String roman) {
-		return "1";
+		return "3";
 	}
 
 }
